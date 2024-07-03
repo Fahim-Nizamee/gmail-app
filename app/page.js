@@ -1,4 +1,3 @@
-import templateImage from "@/public/images/templateImage.svg";
 import dropdownArrow from "@/public/images/dropdownArrow.svg";
 import refresh from "@/public/images/refresh.svg";
 import menuDots from "@/public/images/menuDots.svg";
@@ -7,44 +6,9 @@ import arrowRight from "@/public/images/arrowRight.svg";
 import starred from "@/public/images/starred.svg";
 import Image from "next/image";
 import Link from "next/link";
+import mails from "./components/items/mails";
 
 export default function Home() {
-  const mails = [
-    {
-      id: 1,
-      username: "Scarlytemplates",
-      subject: "Check out my templates",
-      mail_id: "randomdesign@gmail.com",
-      message_top:
-        "Hi, are you liking this template? Then try out my new template for mobile Gmail!",
-      message_bottom:
-        "Click link here >>> https://www.figma.com/community/file/984761507298963796 ",
-      images: [
-        {
-          id:1,
-          image: templateImage,
-        },
-      ],
-      date: "June 25, 2018, 3:26PM",
-    },
-    {
-      id: 2,
-      username: "Fahim Nizamee",
-      subject: "Demo templates",
-      mail_id: "nizameef@gmail.com",
-      message_top:
-        "Hi, are you liking this template? Then try out my new template for mobile Gmail!",
-      message_bottom:
-        "Click link here >>> https://www.figma.com/community/file/984761507298963796 ",
-      images: [
-        {
-          id:1,
-          image: templateImage,
-        },
-      ],
-      date: "June 25, 2018, 3:26PM",
-    },
-  ];
   return (
     <main>
       <div className="pt-2 flex justify-between px-2">

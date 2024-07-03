@@ -24,6 +24,7 @@ import profilePic from "@/public/images/profilePic.svg";
 import starred from "@/public/images/starred.svg";
 import more from "@/public/images/more.svg";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 export default function Message({ params }) {
   const searchParams = useSearchParams();
@@ -39,10 +40,10 @@ export default function Message({ params }) {
     <main>
       <div className="p-4">
         <div className="pb-10 flex justify-between">
-          <div className="flex">
-            <button className="mr-10">
+          <div className="flex items-center">
+            <Link href={'/'} className="mr-10">
               <Image src={longArrowLeft} alt="longArrowLeft" />
-            </button>
+            </Link>
             <div className="flex gap-4">
               <button>
                 <Image src={archive} alt="archive" />
