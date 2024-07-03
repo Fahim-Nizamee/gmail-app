@@ -11,15 +11,17 @@ function MenuComponent() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if(pathname!=='/')
-      {
-        const currentPath = pathname.split("/").pop();
-        setSelected(currentPath);
-      }
-      else{
-        setSelected(pathname);
-      }
-    
+    if (
+      pathname === "/drafts" ||
+      pathname === "/starred" ||
+      pathname === "/snoozed" ||
+      pathname === "/sent"
+    ) {
+      const currentPath = pathname.split("/").pop();
+      setSelected(currentPath);
+    } else {
+      setSelected("/");
+    }
   }, [pathname]);
 
   function handleClick(id) {
@@ -33,10 +35,8 @@ function MenuComponent() {
       {menuItems.map(({ id, icon, label, count }) => (
         <div
           key={id}
-          className={`flex items-center justify-between pl-4 pr-4 mr-2 py-[2px] cursor-pointer rounded-r-full ${
-            selected === id
-              ? "bg-[#D3E3FD] font-semibold"
-              : "hover:bg-[#D3E3FD]"
+          className={`flex items-center justify-between text-gray-700 text-sm pl-4 pr-4 mr-2 py-2 cursor-pointer rounded-r-full ${
+            selected === id ? "bg-[#D3E3FD] font-semibold" : "hover:bg-gray-200"
           }`}
           onClick={() => handleClick(id)}
         >
@@ -52,6 +52,5 @@ function MenuComponent() {
     </>
   );
 }
-
 
 export default MenuComponent;

@@ -5,7 +5,7 @@ import inbox from "@/public/images/inbox.svg";
 import drafts from "@/public/images/drafts.svg";
 
 const menuItems = [
-  { id: "/", icon: inbox, label: "Inbox", count: 14 },
+  { id: "/", icon: inbox, label: "Inbox", count: 2 },
   { id: "starred", icon: starred, label: "Starred", count: null },
   { id: "snoozed", icon: snoozed, label: "Snoozed", count: null },
   { id: "sent", icon: sent, label: "Sent", count: null },
